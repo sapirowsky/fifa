@@ -1,7 +1,26 @@
 <script setup>
-const isSidebarOpen = ref(false);
-const currentSidebarTab = ref("");
-const isSubHeaderOpen = ref(false);
+import { useSidebarStore } from "~/stores/sidebar";
+
+const { isSidebarOpen, currentSidebarTab, isSubHeaderOpen } = toRefs(
+  useSidebarStore()
+);
+
+const groups = [
+  { group: "A", name: "groupA" },
+  { group: "B", name: "groupB" },
+  { group: "C", name: "groupC" },
+  { group: "D", name: "groupD" },
+  { group: "E", name: "groupE" },
+  { group: "F", name: "groupF" },
+  { group: "G", name: "groupG" },
+  { group: "H", name: "groupH" },
+];
+const data = [
+  {
+    group: "A",
+    countries: [],
+  },
+];
 </script>
 <template>
   <div class="flex min-h-screen antialiased">
@@ -130,302 +149,13 @@ const isSubHeaderOpen = ref(false);
             <span class="sr-only">Włącz/wyłącz pasek boczny</span>
             <UiMenu />
           </button>
-          <button
-            @click="
-              isSidebarOpen && currentSidebarTab == 'groupA'
-                ? (isSidebarOpen = false)
-                : (isSidebarOpen = true);
-              currentSidebarTab = 'groupA';
-            "
-            class="
-              p-2
-              w-10
-              transition-colors
-              rounded-lg
-              shadow-md
-              dark:shadow-indigo-900
-              hover:bg-indigo-800
-              dark:hover:bg-indigo-500
-              hover:text-darky-white
-              dark:hover:text-lighty-black
-              focus:outline-none
-              focus:ring
-              focus:ring-indigo-500
-              focus:ring-offset-white
-              dark:focus:ring-offset-black
-              focus:ring-offset-2
-              text-gray-500
-              bg-white
-              dark:bg-black
-            "
-            :class="
-              isSidebarOpen && currentSidebarTab == 'groupA'
-                ? 'text-white bg-indigo-600'
-                : 'text-gray-500 bg-white'
-            "
-          >
-            <span class="sr-only">Grupa A</span>
-            A
-          </button>
-          <button
-            @click="
-              isSidebarOpen && currentSidebarTab == 'groupB'
-                ? (isSidebarOpen = false)
-                : (isSidebarOpen = true);
-              currentSidebarTab = 'groupB';
-            "
-            class="
-              p-2
-              w-10
-              transition-colors
-              rounded-lg
-              shadow-md
-              dark:shadow-indigo-900
-              hover:bg-indigo-800
-              dark:hover:bg-indigo-500
-              hover:text-darky-white
-              dark:hover:text-lighty-black
-              focus:outline-none
-              focus:ring
-              focus:ring-indigo-500
-              focus:ring-offset-white
-              dark:focus:ring-offset-black
-              focus:ring-offset-2
-              text-gray-500
-              bg-white
-              dark:bg-black
-            "
-            :class="
-              isSidebarOpen && currentSidebarTab == 'groupB'
-                ? 'text-white bg-indigo-600'
-                : 'text-gray-500 bg-white'
-            "
-          >
-            <span class="sr-only">Grupa B</span>
-            B
-          </button>
-          <button
-            @click="
-              isSidebarOpen && currentSidebarTab == 'groupC'
-                ? (isSidebarOpen = false)
-                : (isSidebarOpen = true);
-              currentSidebarTab = 'groupC';
-            "
-            class="
-              p-2
-              w-10
-              transition-colors
-              rounded-lg
-              shadow-md
-              dark:shadow-indigo-900
-              hover:bg-indigo-800
-              dark:hover:bg-indigo-500
-              hover:text-darky-white
-              dark:hover:text-lighty-black
-              focus:outline-none
-              focus:ring
-              focus:ring-indigo-500
-              focus:ring-offset-white
-              dark:focus:ring-offset-black
-              focus:ring-offset-2
-              text-gray-500
-              bg-white
-              dark:bg-black
-            "
-            :class="
-              isSidebarOpen && currentSidebarTab == 'groupC'
-                ? 'text-white bg-indigo-600'
-                : 'text-gray-500 bg-white'
-            "
-          >
-            <span class="sr-only">Grupa C</span>
-            C
-          </button>
-          <button
-            @click="
-              isSidebarOpen && currentSidebarTab == 'groupD'
-                ? (isSidebarOpen = false)
-                : (isSidebarOpen = true);
-              currentSidebarTab = 'groupD';
-            "
-            class="
-              p-2
-              w-10
-              transition-colors
-              rounded-lg
-              shadow-md
-              dark:shadow-indigo-900
-              hover:bg-indigo-800
-              dark:hover:bg-indigo-500
-              hover:text-darky-white
-              dark:hover:text-lighty-black
-              focus:outline-none
-              focus:ring
-              focus:ring-indigo-500
-              focus:ring-offset-white
-              dark:focus:ring-offset-black
-              focus:ring-offset-2
-              text-gray-500
-              bg-white
-              dark:bg-black
-            "
-            :class="
-              isSidebarOpen && currentSidebarTab == 'groupD'
-                ? 'text-white bg-indigo-600'
-                : 'text-gray-500 bg-white'
-            "
-          >
-            <span class="sr-only">Grupa D</span>
-            D
-          </button>
-          <button
-            @click="
-              isSidebarOpen && currentSidebarTab == 'groupE'
-                ? (isSidebarOpen = false)
-                : (isSidebarOpen = true);
-              currentSidebarTab = 'groupE';
-            "
-            class="
-              p-2
-              w-10
-              transition-colors
-              rounded-lg
-              shadow-md
-              dark:shadow-indigo-900
-              hover:bg-indigo-800
-              dark:hover:bg-indigo-500
-              hover:text-darky-white
-              dark:hover:text-lighty-black
-              focus:outline-none
-              focus:ring
-              focus:ring-indigo-500
-              focus:ring-offset-white
-              dark:focus:ring-offset-black
-              focus:ring-offset-2
-              text-gray-500
-              bg-white
-              dark:bg-black
-            "
-            :class="
-              isSidebarOpen && currentSidebarTab == 'groupE'
-                ? 'text-white bg-indigo-600'
-                : 'text-gray-500 bg-white'
-            "
-          >
-            <span class="sr-only">Grupa E</span>
-            E
-          </button>
-          <button
-            @click="
-              isSidebarOpen && currentSidebarTab == 'groupF'
-                ? (isSidebarOpen = false)
-                : (isSidebarOpen = true);
-              currentSidebarTab = 'groupF';
-            "
-            class="
-              p-2
-              w-10
-              transition-colors
-              rounded-lg
-              shadow-md
-              dark:shadow-indigo-900
-              hover:bg-indigo-800
-              dark:hover:bg-indigo-500
-              hover:text-darky-white
-              dark:hover:text-lighty-black
-              focus:outline-none
-              focus:ring
-              focus:ring-indigo-500
-              focus:ring-offset-white
-              dark:focus:ring-offset-black
-              focus:ring-offset-2
-              text-gray-500
-              bg-white
-              dark:bg-black
-            "
-            :class="
-              isSidebarOpen && currentSidebarTab == 'groupF'
-                ? 'text-white bg-indigo-600'
-                : 'text-gray-500 bg-white'
-            "
-          >
-            <span class="sr-only">Grupa F</span>
-            F
-          </button>
-          <button
-            @click="
-              isSidebarOpen && currentSidebarTab == 'groupG'
-                ? (isSidebarOpen = false)
-                : (isSidebarOpen = true);
-              currentSidebarTab = 'groupG';
-            "
-            class="
-              p-2
-              w-10
-              transition-colors
-              rounded-lg
-              shadow-md
-              dark:shadow-indigo-900
-              hover:bg-indigo-800
-              dark:hover:bg-indigo-500
-              hover:text-darky-white
-              dark:hover:text-lighty-black
-              focus:outline-none
-              focus:ring
-              focus:ring-indigo-500
-              focus:ring-offset-white
-              dark:focus:ring-offset-black
-              focus:ring-offset-2
-              text-gray-500
-              bg-white
-              dark:bg-black
-            "
-            :class="
-              isSidebarOpen && currentSidebarTab == 'groupG'
-                ? 'text-white bg-indigo-600'
-                : 'text-gray-500 bg-white'
-            "
-          >
-            <span class="sr-only">Grupa G</span>
-            G
-          </button>
-          <button
-            @click="
-              isSidebarOpen && currentSidebarTab == 'groupH'
-                ? (isSidebarOpen = false)
-                : (isSidebarOpen = true);
-              currentSidebarTab = 'groupH';
-            "
-            class="
-              p-2
-              w-10
-              transition-colors
-              rounded-lg
-              shadow-md
-              dark:shadow-indigo-900
-              hover:bg-indigo-800
-              dark:hover:bg-indigo-500
-              hover:text-darky-white
-              dark:hover:text-lighty-black
-              focus:outline-none
-              focus:ring
-              focus:ring-indigo-500
-              focus:ring-offset-white
-              dark:focus:ring-offset-black
-              focus:ring-offset-2
-              text-gray-500
-              bg-white
-              dark:bg-black
-            "
-            :class="
-              isSidebarOpen && currentSidebarTab == 'groupH'
-                ? 'text-white bg-indigo-600'
-                : 'text-gray-500 bg-white'
-            "
-          >
-            <span class="sr-only">Grupa H</span>
-            H
-          </button>
+
+          <BarItem
+            v-for="item in groups"
+            :group="item.group"
+            :name="item.name"
+            :key="item.name"
+          />
         </div>
       </nav>
       <transition name="sidebar">
@@ -502,30 +232,12 @@ const isSubHeaderOpen = ref(false);
               </NuxtLink>
             </div>
           </nav>
-          <div v-if="currentSidebarTab == 'groupA'" class="px-4 py-6">
-            <h2 class="text-xl">Grupa A</h2>
-          </div>
-          <div v-if="currentSidebarTab == 'groupB'" class="px-4 py-6">
-            <h2 class="text-xl">Grupa B</h2>
-          </div>
-          <div v-if="currentSidebarTab == 'groupC'" class="px-4 py-6">
-            <h2 class="text-xl">Grupa C</h2>
-          </div>
-          <div v-if="currentSidebarTab == 'groupD'" class="px-4 py-6">
-            <h2 class="text-xl">Grupa D</h2>
-          </div>
-          <div v-if="currentSidebarTab == 'groupE'" class="px-4 py-6">
-            <h2 class="text-xl">Grupa E</h2>
-          </div>
-          <div v-if="currentSidebarTab == 'groupF'" class="px-4 py-6">
-            <h2 class="text-xl">Grupa F</h2>
-          </div>
-          <div v-if="currentSidebarTab == 'groupG'" class="px-4 py-6">
-            <h2 class="text-xl">Grupa G</h2>
-          </div>
-          <div v-if="currentSidebarTab == 'groupH'" class="px-4 py-6">
-            <h2 class="text-xl">Grupa H</h2>
-          </div>
+          <BarItemExt
+            v-for="item in groups"
+            :name="item.name"
+            :group="item.group"
+            :key="item.group"
+          />
         </div>
       </transition>
     </div>

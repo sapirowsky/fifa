@@ -3,7 +3,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
         '@nuxtjs/color-mode',
-        '@pinia/nuxt'
+        '@pinia/nuxt',
+        '@nuxt/image-edge'
     ],
     tailwindcss: {
         exposeConfig: true,
@@ -13,5 +14,15 @@ export default defineNuxtConfig({
         fallback: 'light',
         classSuffix: '',
         storageKey: 'theme'
-    }   
+    },
+    image: {
+        presets: {
+            flag: {
+                modifiers: {
+                    format: 'webp',
+                    quality: '60'
+                }
+            }
+        }
+    }
 })

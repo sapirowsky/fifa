@@ -232,12 +232,14 @@ const data = [
               </NuxtLink>
             </div>
           </nav>
-          <BarItemExt
-            v-for="item in groups"
-            :name="item.name"
-            :group="item.group"
-            :key="item.group"
-          />
+          <div v-for="item in groups" :key="item.group">
+            <div
+              v-if="currentSidebarTab == item.name"
+              class="px-4 py-6 h-[calc(100vh-1rem)]"
+            >
+              <BarItemExt :group="item.group" />
+            </div>
+          </div>
         </div>
       </transition>
     </div>

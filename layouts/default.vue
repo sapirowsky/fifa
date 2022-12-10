@@ -23,13 +23,13 @@ const data = [
 ];
 </script>
 <template>
-  <div class="flex min-h-screen antialiased">
+  <div class="flex">
     <!-- sidebars -->
-    <div class="flex flex-shrink-0 transition-all">
+    <div class="flex transition-all">
       <div
         v-if="isSidebarOpen"
         @click="isSidebarOpen = false"
-        class="fixed inset-0 z-10 bg-black bg-opacity-50 lg:hidden"
+        class="fixed inset-0 z-10 bg-black bg-opacity-50 backdrop-blur-sm"
       ></div>
       <div
         v-if="isSidebarOpen"
@@ -54,6 +54,7 @@ const data = [
           sm:hidden
           shadow
           rounded-t-3xl
+          z-10
         "
       >
         <button
@@ -87,16 +88,28 @@ const data = [
           <span class="sr-only">Włącz Pasek boczny</span>
           <UiMenu />
         </button>
-        <NuxtLink to="/"> @ </NuxtLink>
+        <NuxtLink to="/">
+          <NuxtImg
+            :src="
+              $colorMode.preference === 'dark'
+                ? 'fball-logo-dark.png'
+                : 'fball-logo-light.png'
+            "
+            class="w-10 rounded object-cover"
+            preset="logo"
+          />
+        </NuxtLink>
       </nav>
 
       <!-- Left Mini Bar -->
+      <div class="w-16 hidden sm:block"></div>
       <nav
         class="
-          z-20
+          z-30
           flex-col
           items-center
-          flex-shrink-0
+          fixed
+          inset-y-0
           hidden
           w-16
           py-4
@@ -107,12 +120,25 @@ const data = [
           shadow-md
           sm:flex
           rounded-r-3xl
+          h-screen
         "
       >
         <!-- logo -->
-        <NuxtLink to="/" class="flex-shrink-0 py-4 w-10"> @ </NuxtLink>
+        <NuxtLink to="/" class="py-4 w-10">
+          <div class="w-full h-full">
+            <NuxtImg
+              :src="
+                $colorMode.preference === 'dark'
+                  ? 'fball-logo-dark.png'
+                  : 'fball-logo-light.png'
+              "
+              class="w-full rounded object-cover"
+              preset="logo"
+            />
+          </div>
+        </NuxtLink>
         <!-- items -->
-        <div class="flex flex-col items-center flex-1 p-2 space-y-4">
+        <div class="p-2 relative h-full overflow-auto">
           <button
             @click="
               isSidebarOpen && currentSidebarTab == 'linksTab'
@@ -163,10 +189,10 @@ const data = [
           v-if="isSidebarOpen"
           class="
             fixed
+            h-screen
             inset-y-0
             left-0
-            z-10
-            flex-shrink-0
+            z-20
             w-64
             bg-white
             dark:bg-black
@@ -176,62 +202,11 @@ const data = [
             sm:left-16
             rounded-r-3xl
             sm:w-72
-            lg:static lg:w-64
+            lg:w-64
           "
         >
-          <nav
-            v-if="currentSidebarTab == 'linksTab'"
-            class="flex flex-col h-full"
-          >
-            <div class="flex items-center justify-center flex-shrink-0 py-10">
-              <NuxtLink to="/">@</NuxtLink>
-            </div>
-            <div
-              class="flex-1 px-4 space-y-2 overflow-hidden hover:overflow-auto"
-            >
-              <NuxtLink
-                to="/"
-                class="
-                  flex
-                  items-center
-                  w-full
-                  space-x-2
-                  text-indigo-800
-                  rounded-lg
-                "
-              >
-                <span class="bg-indigo-700 text-white rounded-lg">
-                  <UiHome />
-                </span>
-                <span>Home</span>
-              </NuxtLink>
-              <NuxtLink
-                to="/"
-                class="
-                  flex
-                  items-center
-                  space-x-2
-                  text-indigo-600
-                  transition-colors
-                  rounded-lg
-                  group
-                  hover:bg-indigo-600 hover:text-white
-                "
-              >
-                <span
-                  class="
-                    p-2
-                    transition-colors
-                    rounded-lg
-                    hover:bg-indigo-700 hover:text-white
-                  "
-                >
-                  <UiPage />
-                </span>
-                <span>Strona</span>
-              </NuxtLink>
-            </div>
-          </nav>
+          <MainNav v-if="currentSidebarTab == 'linksTab'" />
+
           <div v-for="item in groups" :key="item.group">
             <div
               v-if="currentSidebarTab == item.name"
@@ -245,8 +220,8 @@ const data = [
     </div>
 
     <!-- content -->
-    <div class="flex flex-col flex-1">
-      <header class="relative flex items-center justify-end flex-shrink-0 p-4">
+    <div class="flex flex-col w-full">
+      <header class="relative flex items-center justify-end p-4">
         <div class="items-center hidden ml-4 sm:flex">
           <ChangeTheme />
         </div>
@@ -277,6 +252,7 @@ const data = [
         <transition name="subHeader">
           <div
             class="
+              z-10
               absolute
               flex
               items-center
@@ -294,15 +270,13 @@ const data = [
             v-if="isSubHeaderOpen"
           >
             <ChangeTheme />
-            <select>
-              <option value=""></option>
-            </select>
+            <GroupDropDown />
           </div>
         </transition>
       </header>
-      <div class="flex flex-1">
+      <div class="flex">
         <!-- main -->
-        <main class="flex-1 px-4 py-8">
+        <main class="px-4 pt-0 pb-8 w-full flex justify-center">
           <slot />
         </main>
       </div>

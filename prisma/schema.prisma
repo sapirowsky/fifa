@@ -40,3 +40,20 @@ model Standings {
   group String
   teams Json[]
 }
+
+model ExtendedMatches {
+  id             Int      @id
+  away_score     Int
+  away_scorers   String[]
+  away_team_name String
+  away_team_id   Int
+  away_flag      String
+  home_score     Int
+  home_scorers   String[]
+  home_team_name String
+  home_team_id   Int
+  home_flag      String
+  group          String
+  finished       Boolean
+  matchday       Int
+}

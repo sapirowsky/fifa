@@ -7,6 +7,7 @@ export default defineNuxtConfig({
         '@nuxt/image-edge'
     ],
     tailwindcss: {
+        cssPath: '~/assets/css/tailwind.css',
         exposeConfig: true,
     },
     colorMode: {
@@ -21,6 +22,12 @@ export default defineNuxtConfig({
                 modifiers: {
                     format: 'webp',
                     quality: '60'
+                }
+            },
+            logo: {
+                modifiers: {
+                    format: 'webp',
+                    quality: '100'
                 }
             }
         }

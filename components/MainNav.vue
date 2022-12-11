@@ -12,6 +12,7 @@ const { isSidebarOpen } = toRefs(useSidebarStore());
               ? 'fball-logo-dark.png'
               : 'fball-logo-light.png'
           "
+          alt="logo"
           class="w-full rounded object-cover"
           preset="logo"
         />

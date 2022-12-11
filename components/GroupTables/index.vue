@@ -267,7 +267,9 @@ const moveTo = (path) => {
                   class="absolute border-l border-indigo-500 h-6"
                 ></span>
                 <span>{{ i + 1 }}</span>
-                <NuxtImg :src="team.flag" class="w-6 h-6" preset="flag" />
+                <div class="w-6 grid place-content-center">
+                  <NuxtImg :src="team.flag" :alt="team.name_pl" preset="flag" />
+                </div>
                 <h2>{{ team.name_pl }}</h2>
               </div>
             </td>

@@ -91,6 +91,7 @@ const moveTo = (path) => {
           rounded
         "
         :src="e.flag"
+        :alt="e.name_pl"
         preset="flag"
       />
     </div>

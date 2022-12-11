@@ -4,7 +4,8 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@nuxtjs/color-mode',
         '@pinia/nuxt',
-        '@nuxt/image-edge'
+        '@nuxt/image-edge',
+        '@averjs/nuxt-compression'
     ],
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',

@@ -95,6 +95,7 @@ const data = [
                 ? 'fball-logo-dark.png'
                 : 'fball-logo-light.png'
             "
+            alt="logo"
             class="w-10 rounded object-cover"
             preset="logo"
           />
@@ -132,6 +133,7 @@ const data = [
                   ? 'fball-logo-dark.png'
                   : 'fball-logo-light.png'
               "
+              alt="logo"
               class="w-full rounded object-cover"
               preset="logo"
             />

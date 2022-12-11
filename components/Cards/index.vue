@@ -1,4 +1,7 @@
 <script setup>
+import { useSidebarStore } from "~~/stores/sidebar";
+const { isSidebarOpen, isSubHeaderOpen } = toRefs(useSidebarStore());
+
 const props = defineProps({
   group: String,
 });
@@ -34,6 +37,10 @@ if (
     return b.ga - a.ga;
   });
 }
+const router = useRouter();
+const moveTo = (path) => {
+  router.push({ path });
+};
 </script>
 <template>
   <div
@@ -49,8 +56,18 @@ if (
       dark:border-indigo-800
       rounded-lg
       flex flex-col
+      cursor-pointer
     "
-    :class="i < 2 ? 'bg-green-400 bg-opacity-60' : 'bg-red-500 bg-opacity-60'"
+    :class="
+      i < 2
+        ? 'bg-green-400 bg-opacity-60 hover:bg-opacity-80'
+        : 'bg-red-500 bg-opacity-60 hover:bg-opacity-80'
+    "
+    @click="
+      isSidebarOpen = false;
+      isSubHeaderOpen = false;
+      moveTo('/kraje/' + e.name_pl);
+    "
   >
     <div
       class="

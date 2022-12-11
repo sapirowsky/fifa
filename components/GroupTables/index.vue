@@ -1,11 +1,10 @@
 <script setup>
-async function getData() {
+const getData = async () => {
   const data = await useFetch("/api/findStandings", {
     method: "GET",
   });
   return data.data.value;
-}
-
+};
 const standings = await getData();
 standings.forEach((e) => {
   if (
@@ -32,13 +31,17 @@ standings.forEach((e) => {
     });
   }
 });
-console.log(standings);
+
+const router = useRouter();
+const moveTo = (path) => {
+  router.push({ path });
+};
 </script>
 <template>
   <div class="container space-y-4 mb-8">
     <div v-for="item in standings" :key="item.id" class="overflow-auto">
+      <h1 class="text-xl">Grupa {{ item.group }}</h1>
       <table class="w-full">
-        <h1 class="text-xl">Grupa {{ item.group }}</h1>
         <tbody>
           <tr class="">
             <td>Drużyna</td>
@@ -254,7 +257,8 @@ console.log(standings);
           <tr
             v-for="(team, i) in item.teams"
             :key="team.team_id"
-            class="hover:bg-white dark:hover:bg-black"
+            class="hover:bg-white dark:hover:bg-black cursor-pointer"
+            @click="moveTo('/kraje/' + team.name_pl)"
           >
             <td>
               <div class="flex space-x-1 w-48">
@@ -263,7 +267,7 @@ console.log(standings);
                   class="absolute border-l border-indigo-500 h-6"
                 ></span>
                 <span>{{ i + 1 }}</span>
-                <NuxtImg :src="team?.flag" class="w-6 h-6" :preset="flag" />
+                <NuxtImg :src="team.flag" class="w-6 h-6" preset="flag" />
                 <h2>{{ team.name_pl }}</h2>
               </div>
             </td>

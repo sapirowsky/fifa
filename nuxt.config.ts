@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         exposeConfig: true,
     },
     colorMode: {
-        preference: 'system',
+        preference: 'dark',
         fallback: 'light',
         classSuffix: '',
         storageKey: 'theme'

@@ -13,7 +13,7 @@ const { isSidebarOpen } = toRefs(useSidebarStore());
               : 'fball-logo-light.png'
           "
           alt="logo"
-          class="w-full rounded object-cover"
+          class="w-full h-full rounded object-cover"
           preset="logo"
         />
       </NuxtLink>

@@ -96,7 +96,7 @@ const data = [
                 : 'fball-logo-light.png'
             "
             alt="logo"
-            class="w-10 rounded object-cover"
+            class="w-10 h-full rounded object-cover"
             preset="logo"
           />
         </NuxtLink>
@@ -134,7 +134,7 @@ const data = [
                   : 'fball-logo-light.png'
               "
               alt="logo"
-              class="w-full rounded object-cover"
+              class="w-full h-full rounded object-cover"
               preset="logo"
             />
           </div>

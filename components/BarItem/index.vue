@@ -21,6 +21,7 @@ const props = defineProps({
         currentSidebarTab = name;
       "
       class="
+        mt-4
         p-2
         w-10
         transition-colors
@@ -40,7 +41,6 @@ const props = defineProps({
         text-gray-500
         bg-white
         dark:bg-black
-        mt-2
       "
       :class="
         isSidebarOpen && currentSidebarTab == name

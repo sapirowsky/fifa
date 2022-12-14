@@ -16,17 +16,42 @@ useClickOutside(target, () => {
 });
 </script>
 <template>
-  <div
-    v-for="match in matches"
-    :key="match.id"
-    class="w-full flex justify-between"
-  >
-    <span class="w-48"> {{ match.away_team_name }}</span>
-    <span> {{ match.away_score }} : {{ match.home_score }}</span>
-    <span class="w-48 flex justify-end"> {{ match.home_team_name }}</span>
-  </div>
+  <article class="w-3/4">
+    <div
+      v-for="(match, i) in matches"
+      :key="match.id"
+      class="w-full flex justify-between p-4"
+      :class="
+        (i + 1) % 2
+          ? $colorMode.preference == 'dark'
+            ? 'bg-gray-500'
+            : ''
+          : $colorMode.preference == 'dark'
+          ? ''
+          : 'bg-gray-400'
+      "
+    >
+      <div class="w-60 flex flex-col justify-between">
+        <div class="w-9 h-6">
+          <NuxtImg class="w-full h-full" :src="match.away_flag" preset="flag" />
+        </div>
 
-  <div ref="target" class="dropdown">
+        <span class="w-48"> {{ match.away_team_name }}</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span> {{ match.away_score }} : {{ match.home_score }}</span>
+        <span>Dzień turnieju: {{ match.matchday }}</span>
+      </div>
+      <div class="w-60 flex flex-col justify-between items-end">
+        <div class="w-9 h-6">
+          <NuxtImg class="w-full h-full" :src="match.home_flag" preset="flag" />
+        </div>
+
+        <span class="w-48 flex justify-end"> {{ match.home_team_name }}</span>
+      </div>
+    </div>
+  </article>
+  <!-- <div ref="target" class="dropdown">
     <button class="select w-full" @click="dropDownOpen = !dropDownOpen">
       <span class="name">Grupy</span>
       <div class="caret"></div>
@@ -35,7 +60,7 @@ useClickOutside(target, () => {
       <li>Grupa A</li>
       <li>Grupa B</li>
     </ul>
-  </div>
+  </div> -->
 </template>
 <style scoped>
 .dropdown {

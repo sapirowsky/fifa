@@ -15,6 +15,11 @@ useHead({
       rel: "stylesheet",
       href: "./flag-icons.min.css",
     },
+    {
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon.ico",
+    },
   ],
 });
 </script>

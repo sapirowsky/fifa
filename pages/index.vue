@@ -42,7 +42,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">2</span>
                       </td>
                     </tr>
                     <tr class="tournament-bracket__team">
@@ -56,7 +56,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">2</span>
                       </td>
                     </tr>
                   </tbody>
@@ -143,7 +143,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">1</span>
                       </td>
                     </tr>
                     <tr class="tournament-bracket__team">
@@ -157,7 +157,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">2</span>
                       </td>
                     </tr>
                   </tbody>
@@ -194,7 +194,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">1</span>
                       </td>
                     </tr>
                     <tr class="tournament-bracket__team">
@@ -210,7 +210,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">0</span>
                       </td>
                     </tr>
                   </tbody>
@@ -239,23 +239,6 @@
                     </tr>
                   </thead>
                   <tbody class="tournament-bracket__content">
-                    <tr class="tournament-bracket__team">
-                      <td class="tournament-bracket__country">
-                        <abbr class="tournament-bracket__code" title="Canada"
-                          >CAN</abbr
-                        >
-                        <span
-                          class="
-                            tournament-bracket__flag
-                            flag-icon flag-icon-ca
-                          "
-                          aria-label="Flag"
-                        ></span>
-                      </td>
-                      <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">1</span>
-                      </td>
-                    </tr>
                     <tr
                       class="
                         tournament-bracket__team
@@ -263,19 +246,30 @@
                       "
                     >
                       <td class="tournament-bracket__country">
-                        <abbr class="tournament-bracket__code" title="Chorwacja"
-                          >CRO</abbr
+                        <abbr class="tournament-bracket__code" title="Argentyna"
+                          >ARG</abbr
                         >
                         <span
-                          class="
-                            tournament-bracket__flag
-                            flag-icon flag-icon-cz
-                          "
+                          class="tournament-bracket__flag flag-icon fi fi-ar"
                           aria-label="Flag"
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">2</span>
+                        <span class="tournament-bracket__number">3</span>
+                      </td>
+                    </tr>
+                    <tr class="tournament-bracket__team">
+                      <td class="tournament-bracket__country">
+                        <abbr class="tournament-bracket__code" title="Chorwacja"
+                          >CRO</abbr
+                        >
+                        <span
+                          class="tournament-bracket__flag flag-icon fi fi-hr"
+                          aria-label="Flag"
+                        ></span>
+                      </td>
+                      <td class="tournament-bracket__score">
+                        <span class="tournament-bracket__number">0</span>
                       </td>
                     </tr>
                   </tbody>
@@ -298,19 +292,16 @@
                   <tbody class="tournament-bracket__content">
                     <tr class="tournament-bracket__team">
                       <td class="tournament-bracket__country">
-                        <abbr class="tournament-bracket__code" title="Finland"
-                          >FIN</abbr
+                        <abbr class="tournament-bracket__code" title="Francja"
+                          >FRA</abbr
                         >
                         <span
-                          class="
-                            tournament-bracket__flag
-                            flag-icon flag-icon-fi
-                          "
+                          class="tournament-bracket__flag fi fi-fr"
                           aria-label="Flag"
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">4</span>
+                        <span class="tournament-bracket__number">-</span>
                       </td>
                     </tr>
                     <tr
@@ -320,19 +311,16 @@
                       "
                     >
                       <td class="tournament-bracket__country">
-                        <abbr class="tournament-bracket__code" title="Russia"
-                          >RUS</abbr
+                        <abbr class="tournament-bracket__code" title="Maroko"
+                          >MAR</abbr
                         >
                         <span
-                          class="
-                            tournament-bracket__flag
-                            flag-icon flag-icon-ru
-                          "
+                          class="tournament-bracket__flag fi fi-ma"
                           aria-label="Flag"
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">7</span>
+                        <span class="tournament-bracket__number">-</span>
                       </td>
                     </tr>
                   </tbody>
@@ -366,8 +354,8 @@
                       "
                     >
                       <td class="tournament-bracket__country">
-                        <abbr class="tournament-bracket__code" title="Finland"
-                          >FIN</abbr
+                        <abbr class="tournament-bracket__code" title="Chorwacja"
+                          >CRO</abbr
                         >
                         <span
                           class="
@@ -378,7 +366,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">3</span>
+                        <span class="tournament-bracket__number">-</span>
                         <span
                           class="
                             tournament-bracket__medal
@@ -392,7 +380,7 @@
                     <tr class="tournament-bracket__team">
                       <td class="tournament-bracket__country">
                         <abbr class="tournament-bracket__code" title="Canada"
-                          >CAN</abbr
+                          >?</abbr
                         >
                         <span
                           class="
@@ -403,7 +391,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">2</span>
+                        <span class="tournament-bracket__number">-</span>
                       </td>
                     </tr>
                   </tbody>
@@ -435,21 +423,16 @@
                       "
                     >
                       <td class="tournament-bracket__country">
-                        <abbr
-                          class="tournament-bracket__code"
-                          title="Czech Republic"
-                          >CZE</abbr
+                        <abbr class="tournament-bracket__code" title="Argentyna"
+                          >ARG</abbr
                         >
                         <span
-                          class="
-                            tournament-bracket__flag
-                            flag-icon flag-icon-cz
-                          "
+                          class="tournament-bracket__flag flag-icon fi fi-ar"
                           aria-label="Flag"
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">1</span>
+                        <span class="tournament-bracket__number">-</span>
                         <span
                           class="
                             tournament-bracket__medal
@@ -462,8 +445,8 @@
                     </tr>
                     <tr class="tournament-bracket__team">
                       <td class="tournament-bracket__country">
-                        <abbr class="tournament-bracket__code" title="Russia"
-                          >RUS</abbr
+                        <abbr class="tournament-bracket__code" title="?"
+                          >?</abbr
                         >
                         <span
                           class="
@@ -474,7 +457,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">0</span>
+                        <span class="tournament-bracket__number">-</span>
                         <span
                           class="
                             tournament-bracket__medal
@@ -630,7 +613,6 @@ h2 {
   .tournament-bracket__list {
     margin-bottom: 0;
     padding-bottom: 0;
-    border-right: 1px dashed #e5e5e5;
     border-bottom: 0;
   }
 }
@@ -728,10 +710,10 @@ h2 {
 .tournament-bracket__match {
   display: flex;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #b4b4b4;
   padding: 1em;
   border: 1px solid transparent;
-  border-radius: 0.1em;
+  border-radius: 2em;
   box-shadow: 0 2px 0 0 #e5e5e5;
   outline: none;
   cursor: pointer;
@@ -895,7 +877,7 @@ h2 {
 }
 .tournament-bracket__caption {
   font-size: 0.8rem;
-  color: #bdbdbd;
+  color: #000000;
   font-weight: 300;
   padding-bottom: 0.75em;
 }

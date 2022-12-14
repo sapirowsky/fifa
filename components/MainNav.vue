@@ -75,7 +75,7 @@ const { isSidebarOpen } = toRefs(useSidebarStore());
           "
           :class="$route.path == '/kraje' ? 'bg-indigo-700 text-white' : ''"
         >
-          <UiPage />
+          <UiEarth />
         </span>
         <span>Kraje</span>
       </NuxtLink>

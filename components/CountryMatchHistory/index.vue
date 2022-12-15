@@ -16,7 +16,7 @@ useClickOutside(target, () => {
 });
 </script>
 <template>
-  <article class="w-3/4">
+  <article class="w-3/4 hidden lg:block">
     <div
       v-for="(match, i) in matches"
       :key="match.id"
@@ -48,6 +48,42 @@ useClickOutside(target, () => {
         </div>
 
         <span class="w-48 flex justify-end"> {{ match.home_team_name }}</span>
+      </div>
+    </div>
+  </article>
+  <article
+    class="
+      w-3/4
+      lg:hidden
+      divide-y-2 divide-lighty-black
+      dark:divide-darky-white
+    "
+  >
+    <div v-for="match in matches" :key="match.id">
+      <div class="flex flex-col p-2 gap-2">
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <NuxtImg
+              :src="match.home_flag"
+              class="w-12 object-contain"
+              preset="flag"
+            />
+            <p>{{ match.home_team_name }}</p>
+          </div>
+          <p>{{ match.home_score }}</p>
+        </div>
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <NuxtImg
+              :src="match.away_flag"
+              class="w-12 object-contain"
+              preset="flag"
+            />
+            <p>{{ match.away_team_name }}</p>
+          </div>
+          <p>{{ match.away_score }}</p>
+        </div>
+        <p>Dzień meczu: {{ match.matchday }}</p>
       </div>
     </div>
   </article>

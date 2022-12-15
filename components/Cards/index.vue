@@ -82,14 +82,7 @@ const moveTo = (path) => {
     >
       <p>{{ e.name_pl }}</p>
       <NuxtImg
-        class="
-          w-9
-          h-4/5
-          object-cover
-          border border-indigo-100
-          dark:border-indigo-800
-          rounded
-        "
+        class="w-9 object-contain rounded"
         :src="e.flag"
         :alt="e.name_pl"
         preset="flag"

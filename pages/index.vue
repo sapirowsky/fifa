@@ -290,7 +290,12 @@
                     </tr>
                   </thead>
                   <tbody class="tournament-bracket__content">
-                    <tr class="tournament-bracket__team">
+                    <tr
+                      class="
+                        tournament-bracket__team
+                        tournament-bracket__team--winner
+                      "
+                    >
                       <td class="tournament-bracket__country">
                         <abbr class="tournament-bracket__code" title="Francja"
                           >FRA</abbr
@@ -301,15 +306,10 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">2</span>
                       </td>
                     </tr>
-                    <tr
-                      class="
-                        tournament-bracket__team
-                        tournament-bracket__team--winner
-                      "
-                    >
+                    <tr class="tournament-bracket__team">
                       <td class="tournament-bracket__country">
                         <abbr class="tournament-bracket__code" title="Maroko"
                           >MAR</abbr
@@ -320,7 +320,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">0</span>
                       </td>
                     </tr>
                   </tbody>
@@ -338,7 +338,7 @@
               <div class="tournament-bracket__match" tabindex="0">
                 <table class="tournament-bracket__table">
                   <caption class="tournament-bracket__caption">
-                    <time datetime="2022-12-18">18 Grudnia 2022</time>
+                    <time datetime="2022-12-18">17 Grudnia 2022</time>
                   </caption>
                   <thead class="sr-only">
                     <tr>
@@ -358,15 +358,17 @@
                           >CRO</abbr
                         >
                         <span
-                          class="
-                            tournament-bracket__flag
-                            flag-icon flag-icon-fi
-                          "
+                          class="tournament-bracket__flag fi fi-hr"
                           aria-label="Flag"
                         ></span>
                       </td>
-                      <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                      <td
+                        class="
+                          tournament-bracket__score
+                          tournament-bracket__team--winner
+                        "
+                      >
+                        <span class="tournament-bracket__number">2</span>
                         <span
                           class="
                             tournament-bracket__medal
@@ -379,19 +381,16 @@
                     </tr>
                     <tr class="tournament-bracket__team">
                       <td class="tournament-bracket__country">
-                        <abbr class="tournament-bracket__code" title="Canada"
-                          >?</abbr
+                        <abbr class="tournament-bracket__code" title="Maroko"
+                          >MAR</abbr
                         >
                         <span
-                          class="
-                            tournament-bracket__flag
-                            flag-icon flag-icon-ca
-                          "
+                          class="tournament-bracket__flag fi fi-ma"
                           aria-label="Flag"
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">1</span>
                       </td>
                     </tr>
                   </tbody>
@@ -407,7 +406,7 @@
               <div class="tournament-bracket__match" tabindex="0">
                 <table class="tournament-bracket__table">
                   <caption class="tournament-bracket__caption">
-                    <time datetime="1998-02-22">22 February 1998</time>
+                    <time datetime="1998-02-22">18 Grudnia 2022</time>
                   </caption>
                   <thead class="sr-only">
                     <tr>
@@ -422,7 +421,12 @@
                         tournament-bracket__team--winner
                       "
                     >
-                      <td class="tournament-bracket__country">
+                      <td
+                        class="
+                          tournament-bracket__country
+                          tournament-bracket__team--winner
+                        "
+                      >
                         <abbr class="tournament-bracket__code" title="Argentyna"
                           >ARG</abbr
                         >
@@ -432,7 +436,7 @@
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">3</span>
                         <span
                           class="
                             tournament-bracket__medal
@@ -445,19 +449,16 @@
                     </tr>
                     <tr class="tournament-bracket__team">
                       <td class="tournament-bracket__country">
-                        <abbr class="tournament-bracket__code" title="?"
-                          >?</abbr
+                        <abbr class="tournament-bracket__code" title="Francja"
+                          >FRA</abbr
                         >
                         <span
-                          class="
-                            tournament-bracket__flag
-                            flag-icon flag-icon-ru
-                          "
+                          class="tournament-bracket__flag fi fi-fr"
                           aria-label="Flag"
                         ></span>
                       </td>
                       <td class="tournament-bracket__score">
-                        <span class="tournament-bracket__number">-</span>
+                        <span class="tournament-bracket__number">3</span>
                         <span
                           class="
                             tournament-bracket__medal

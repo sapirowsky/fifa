@@ -21,44 +21,23 @@ const { isSidebarOpen } = toRefs(useSidebarStore());
     <div class="flex-1 px-4 space-y-2 overflow-hidden hover:overflow-auto">
       <NuxtLink
         to="/"
-        class="
-          flex
-          items-center
-          space-x-2
-          transition-colors
-          rounded-lg
-          group
-          hover:bg-indigo-600 hover:text-white
-        "
+        class="flex items-center space-x-2 transition-colors rounded-lg group hover:bg-indigo-600 hover:text-white"
         :class="
           $route.path == '/' ? 'bg-indigo-600 text-white' : 'text-indigo-600'
         "
         @click="isSidebarOpen = false"
       >
         <span
-          class="
-            p-2
-            transition-colors
-            rounded-lg
-            hover:bg-indigo-700 hover:text-white
-          "
+          class="p-2 transition-colors rounded-lg hover:bg-indigo-700 hover:text-white"
           :class="$route.path == '/' ? 'bg-indigo-700 text-white' : ''"
         >
           <UiHome />
         </span>
-        <span>Home</span>
+        <span>Strona Główna</span>
       </NuxtLink>
       <NuxtLink
         to="/kraje"
-        class="
-          flex
-          items-center
-          space-x-2
-          transition-colors
-          rounded-lg
-          group
-          hover:bg-indigo-600 hover:text-white
-        "
+        class="flex items-center space-x-2 transition-colors rounded-lg group hover:bg-indigo-600 hover:text-white"
         :class="
           $route.path == '/kraje'
             ? 'bg-indigo-600 text-white'
@@ -67,12 +46,7 @@ const { isSidebarOpen } = toRefs(useSidebarStore());
         @click="isSidebarOpen = false"
       >
         <span
-          class="
-            p-2
-            transition-colors
-            rounded-lg
-            hover:bg-indigo-700 hover:text-white
-          "
+          class="p-2 transition-colors rounded-lg hover:bg-indigo-700 hover:text-white"
           :class="$route.path == '/kraje' ? 'bg-indigo-700 text-white' : ''"
         >
           <UiEarth />

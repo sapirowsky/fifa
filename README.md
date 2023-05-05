@@ -1,42 +1,9 @@
-# Nuxt 3 Minimal Starter
+# This site provide information about Fifa World Cup
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Was created for one of mine classes, i didn't have to give even a half of work that i did, but i wanted to learn new stuff with this project so i added Skeleton-loading, also practised more use cases of prisma and tailwind.
 
-## Setup
+I wasn't the only author of this site as it was made with Natalia K. who created frontpage bracket and logo.
 
-Make sure to install the dependencies:
+## Tech Stack = Nuxt 3 + Prisma + Tailwind + Pinia
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+And few more used mainly for optimisation: image-edge, nuxt-compression. Or just to make my life easier while creating themes: color-mode.
